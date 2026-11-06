@@ -33,7 +33,22 @@ app.use(
 app.use(express.json({ limit: '15mb' }));
 app.use(express.urlencoded({ extended: true, limit: '15mb' }));
 
-// Health Check & Welcome Route
+// Root Welcome Route & Health Check
+app.get('/', (req, res) => {
+  res.status(200).json({
+    status: 'online',
+    message: 'Welcome to AURELLE Haute Joaillerie & Indian Fashion Jewellery API',
+    brand: 'AURELLE',
+    endpoints: {
+      health: '/api/health',
+      products: '/api/products',
+      categories: '/api/categories',
+      auth: '/api/auth/login',
+    },
+    frontendNotice: 'This is the backend API service. For the customer website, visit your Vercel deployment.',
+  });
+});
+
 app.get('/api/health', (req, res) => {
   res.status(200).json({
     status: 'online',
