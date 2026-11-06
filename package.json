@@ -1,0 +1,27 @@
+{
+  "name": "aurelle-luxury-jewellery-platform",
+  "version": "1.0.0",
+  "description": "AURELLE - Premium Jewellery E-Commerce Full-Stack MERN Platform",
+  "private": true,
+  "scripts": {
+    "start": "node backend/server.js",
+    "backend": "cd backend && npm run start",
+    "backend:dev": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "seed": "cd backend && npm run seed"
+  },
+  "keywords": [
+    "jewellery",
+    "luxury",
+    "ecommerce",
+    "mern",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs"
+  ],
+  "author": "AURELLE Team",
+  "license": "ISC"
+}
+
